@@ -5,14 +5,14 @@ function About() {
   return (
     <div className="bg-gradient-to-br flex flex-col bg-[#100D28]">
       {/* Main About Section - Text Left, Image Right touching edge */}
-      <div className=" w-full flex justify-center items-center mb-16">
-        {/* Left - Text Content (Left-centered with padding) */}
+      <div className="w-full flex items-center mb-16">
+        {/* Left - Text Content with padding */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className=""
+          className="w-1/2 px-8 lg:px-16"
         >
           <h2
             className="text-5xl lg:text-6xl font-bold text-white mb-6"
@@ -38,13 +38,13 @@ function About() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="w-full h-full flex items-center justify-end"
+          className="relative  top-0 left-96 full  overflow-hidden"
         >
           <motion.img
             src="/elysian-elements.png"
             alt="Elysian Elements"
-            className="w-full h-[70vh]  object-contain lg:rounded-l-3xl"
-            whileHover={{ scale: 1.0 }}
+            className="w-full h-[70vh] object-cover"
+            whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           />
         </motion.div>
